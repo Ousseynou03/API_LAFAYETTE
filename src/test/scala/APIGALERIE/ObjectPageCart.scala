@@ -1,6 +1,0 @@
-package APIGALERIE
-
-object ObjectPageCart {
-
-
-}
