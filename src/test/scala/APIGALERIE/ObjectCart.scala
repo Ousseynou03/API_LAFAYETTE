@@ -81,7 +81,7 @@ object ObjectCart {
         .group("${LeGroup}") {
           exec(http("${L_API}")
             .post("/gl-fr/users/current/carts?fields=DEFAULT%2CpotentialProductPromotions%2CappliedProductPromotions(FULL)%2CpotentialOrderPromotions%2CappliedOrderPromotions%2Centries(totalPrice(formattedValue)%2Cproduct(images(FULL)%2Cstock(FULL))%2CbasePrice(formattedValue%2Cvalue)%2Cupdateable)%2CtotalPrice(formattedValue)%2CtotalItems%2CtotalPriceWithTax(formattedValue)%2CtotalDiscounts(value%2CformattedValue)%2CsubTotal(formattedValue)%2CdeliveryItemsQuantity%2CdeliveryCost(formattedValue)%2CtotalTax(formattedValue%2C value)%2CpickupItemsQuantity%2Cnet%2CappliedVouchers%2CproductDiscounts(formattedValue)%2Cuser&lang=fr&curr=EUR ")
-            .body(StringBody("""{}}""")).asJson
+            .body(StringBody("""{}""")).asJson
             .header("Content-Type", "application/json")
             .check(status.is(200))
           )
